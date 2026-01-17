@@ -18,12 +18,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # atau versi yang Anda gunakan
+          node-version: '20'  # ✅ Ubah dari 18 ke 20
       
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8 # sesuaikan dengan versi pnpm project Anda
+          version: 8
       
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
