@@ -15,7 +15,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Alex | Full-stack Engineer",
+  title: "M. Zaedan Al Ghifari | Full-stack Engineer",
   description:
     "Portfolio of a full-stack engineer building systems that scale with simplicity.",
 };
