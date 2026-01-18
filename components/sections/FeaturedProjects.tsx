@@ -5,16 +5,15 @@ import { ArrowRight, Lock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export function SelectedWork() {
+export function FeaturedProjects() {
   return (
     <section id="projects" className="py-24 bg-[var(--background-alt)]">
       <Container>
         <div className="flex justify-between items-end mb-12">
           <div>
-            <h2 className="text-4xl font-serif mb-4">Selected Work</h2>
+            <h2 className="text-4xl font-serif mb-4">Featured Projects</h2>
             <p className="text-muted max-w-md">
-              Highlighting key projects that demonstrate technical depth and
-              product thinking.
+              Showcasing full-stack solutions and technical excellence
             </p>
           </div>
           <Link

@@ -14,10 +14,10 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
-    title: "react-flux-architecture",
+    title: "lentera-bookfinder",
     description:
-      "A modern state management library designed for high-performance React applications, reducing boilerplate by 40%. Implements a uni-directional data flow pattern with simplified reducers.",
-    language: "TypeScript",
+      "A book search application that leverages the OpenLibrary API to help users discover and explore books. Built as a capstone project for the Paradaya program, featuring modern React architecture and responsive design.",
+    language: "C# (ASP.NET Core)",
     languageColor: "#3178c6",
     stars: 2400,
     forks: 342,
@@ -27,24 +27,24 @@ export const projects: Project[] = [
   },
   {
     id: "2",
-    title: "neurapath-engine",
+    title: "LaporAja",
     description:
-      "Experimental interface engine for traversing large language model outputs visually. Built with Rust for WebAssembly target to ensure 60fps performance on large graph datasets.",
-    language: "Rust",
-    languageColor: "#dea584",
+      "Community reporting platform designed for village-level public service management. Developed as undergraduate thesis project to streamline citizen complaints and local government response through a digital solution.",
+    language: "Laravel",
+    languageColor: "#FF2D20",
     stars: 892,
     forks: 120,
     updatedAt: "Updated 1 week ago",
     isPublic: true,
-    link: "https://github.com",
+    link: "https://github.com/mzaedan/laporaja",
   },
   {
     id: "3",
-    title: "vault-analytics-core",
+    title: "PeakCommerce",
     description:
-      "Core processing unit for the Vault Analytics platform. Handles real-time anomaly detection in financial transaction streams using statistical models.",
-    language: "Python",
-    languageColor: "#3572a5",
+      "E-commerce platform developed for the Wirausaha Merdeka program to centralize product listings from multiple group members. Features vendor management, product catalogs, and integrated checkout system.",
+    language: "Laravel",
+    languageColor: "#FF2D20",
     stars: 1200,
     forks: 89,
     updatedAt: "Updated 3 weeks ago",

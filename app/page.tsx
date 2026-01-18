@@ -1,14 +1,14 @@
 import { Hero } from "@/components/sections/Hero";
-import { SelectedWork } from "@/components/sections/SelectedWork";
-import { RecentThinking } from "@/components/sections/RecentThinking";
+import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
+import { Experience } from "@/components/sections/Experience";
 import { TechnicalPalette } from "@/components/sections/TechnicalPalette";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <SelectedWork />
-      <RecentThinking />
+      <FeaturedProjects />
+      <Experience />
       <TechnicalPalette />
     </>
   );
