@@ -23,7 +23,7 @@ export const projects: Project[] = [
     forks: 342,
     updatedAt: "Updated 2 days ago",
     isPublic: true,
-    link: "https://github.com",
+    link: "https://github.com/Paradaya-Lentera/paradaya-lentera-org",
   },
   {
     id: "2",
@@ -49,32 +49,6 @@ export const projects: Project[] = [
     forks: 89,
     updatedAt: "Updated 3 weeks ago",
     isPublic: true,
-    link: "https://github.com",
-  },
-  {
-    id: "4",
-    title: "gossip-protocol-go",
-    description:
-      "A lightweight implementation of the gossip protocol in Go for distributed system state synchronization. Features eventual consistency guarantees and minimal network overhead.",
-    language: "Go",
-    languageColor: "#00add8",
-    stars: 450,
-    forks: 42,
-    updatedAt: "Updated 1 month ago",
-    isPublic: true,
-    link: "https://github.com",
-  },
-  {
-    id: "5",
-    title: "minimal-theme-vscode",
-    description:
-      "A high-contrast, distraction-free theme for VS Code. Designed for long coding sessions with carefully selected color palettes that reduce eye strain.",
-    language: "JSON",
-    languageColor: "#f1e05a",
-    stars: 2800,
-    forks: 156,
-    updatedAt: "Updated 2 months ago",
-    isPublic: true,
-    link: "https://github.com",
+    link: "https://github.com/mzaedan/peak-commerce",
   },
 ];
