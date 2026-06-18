@@ -7,18 +7,20 @@ import Link from "next/link";
 
 export function FeaturedProjects() {
   return (
-    <section id="projects" className="py-24 bg-[var(--background-alt)]">
+    <section id="projects" className="py-24 bg-[#ece4d4]">
       <Container>
         <div className="flex justify-between items-end mb-12">
           <div>
-            <h2 className="text-4xl font-serif mb-4">Featured Projects</h2>
-            <p className="text-muted max-w-md">
+            <h2 className="text-4xl font-serif font-semibold mb-4">
+              Featured Projects
+            </h2>
+            <p className="max-w-md text-[#4c463d]">
               Showcasing full-stack solutions and technical excellence
             </p>
           </div>
           <Link
             href="/projects"
-            className="hidden md:flex items-center text-accent font-medium hover:underline"
+            className="hidden md:flex items-center font-medium text-[#1a1a1a] hover:underline"
           >
             View all repositories <ArrowRight className="ml-2 w-4 h-4" />
           </Link>
@@ -28,12 +30,12 @@ export function FeaturedProjects() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group flex flex-col bg-white rounded-xl overflow-hidden border border-neutral-100 shadow-sm hover:shadow-md transition-shadow"
+              className="group flex flex-col overflow-hidden rounded-[28px] border border-black/5 bg-[#d9cfbf] transition-colors hover:bg-[#d3c8b6]"
             >
-              <div className="aspect-video w-full bg-neutral-900 relative overflow-hidden">
+              <div className="relative aspect-video w-full overflow-hidden bg-[#cfc4b3]">
                 {/* Fallback pattern if no image, or actual image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-neutral-800 to-neutral-900 flex items-center justify-center text-neutral-700">
-                  <span className="text-6xl font-bold opacity-10">
+                <div className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.22),_transparent_52%),linear-gradient(135deg,_#d8ccbc,_#cabdaa)] text-black/10">
+                  <span className="text-6xl font-bold opacity-20">
                     {project.title[0]}
                   </span>
                 </div>
@@ -41,26 +43,26 @@ export function FeaturedProjects() {
 
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-4">
-                  <span className="text-[10px] font-bold tracking-wider text-accent uppercase">
+                  <span className="text-[10px] font-bold tracking-wider text-black/55 uppercase">
                     REPOSITORY
                   </span>
                   {!project.isPublic ? (
-                    <Lock className="w-4 h-4 text-muted/50" />
+                    <Lock className="w-4 h-4 text-black/40" />
                   ) : (
-                    <ArrowRight className="w-4 h-4 text-muted/50 -rotate-45 group-hover:rotate-0 transition-transform" />
+                    <ArrowRight className="w-4 h-4 -rotate-45 text-black/45 transition-transform group-hover:rotate-0" />
                   )}
                 </div>
 
-                <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+                <h3 className="mb-2 text-xl font-semibold text-[#111111] transition-colors group-hover:text-black/80">
                   {project.title}
                 </h3>
 
-                <p className="text-muted text-sm mb-6 line-clamp-3">
+                <p className="mb-6 line-clamp-3 text-sm text-black/65">
                   {project.description}
                 </p>
 
                 <div className="mt-auto flex flex-wrap gap-2">
-                  <Badge className="bg-neutral-100 text-neutral-600 border-transparent">
+                  <Badge className="border-transparent bg-black/6 text-black/65">
                     {project.language}
                   </Badge>
                 </div>
@@ -72,7 +74,7 @@ export function FeaturedProjects() {
         <div className="mt-8 md:hidden text-center">
           <Link
             href="/projects"
-            className="inline-flex items-center text-accent font-medium hover:underline"
+            className="inline-flex items-center font-medium text-[#1a1a1a] hover:underline"
           >
             View all repositories <ArrowRight className="ml-2 w-4 h-4" />
           </Link>
