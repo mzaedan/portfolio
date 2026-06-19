@@ -17,7 +17,7 @@ export function Hero() {
             I’m M. Zaedan Al Ghifari, a full-stack engineer passionate about
             clean code, structured systems, and efficient development workflows.
             I build web applications that balance performance, usability, and
-            long-term maintainability.
+            long term maintainability.
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
             <Link

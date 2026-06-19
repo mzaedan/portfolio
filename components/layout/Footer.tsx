@@ -115,7 +115,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between border-t border-white/10 pt-8 text-xs text-white/45 md:flex-row">
-          <p>Copyright 2024 Alex Developer. All rights reserved.</p>
+          <p>Copyright {new Date().getFullYear()} M Zaedan Al Ghifari. All rights reserved.</p>
           <p>Designed inspired by Anthropic.</p>
         </div>
       </Container>
