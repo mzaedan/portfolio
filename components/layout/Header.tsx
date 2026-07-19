@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
 export function Header() {
@@ -11,9 +10,9 @@ export function Header() {
 
   const navItems = [
     { name: "Projects", href: "/projects" },
-    { name: "About", href: "#about" },
-    { name: "Writing", href: "#writing" },
-    { name: "Contact", href: "#contact" },
+    { name: "Experience", href: "/#experience" },
+    { name: "About", href: "/#about" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -21,7 +20,7 @@ export function Header() {
       <Container className="flex min-h-16 items-center justify-between gap-4">
         <Link
           href="/"
-          className="text-sm font-extrabold tracking-[0.2em] uppercase sm:text-base md:text-xl md:tracking-wide md:-ml-24"
+          className="text-sm font-extrabold uppercase tracking-[0.2em] sm:text-base md:text-xl md:tracking-wide"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           DEV\PORTFOLIO
@@ -48,13 +47,14 @@ export function Header() {
               {item.name}
             </Link>
           ))}
-          <Button
-            variant="primary"
-            size="sm"
-            className="rounded-md px-5 font-normal"
+          <Link
+            href="https://www.linkedin.com/in/m-zaedan-al-ghifari/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-md bg-foreground px-5 py-2 text-sm font-medium text-white transition-opacity hover:opacity-85"
           >
-            Resume <ArrowUpRight className="ml-1 h-3 w-3" />
-          </Button>
+            Let’s talk <ArrowUpRight className="ml-1 h-3 w-3" />
+          </Link>
         </nav>
       </Container>
 
@@ -74,14 +74,15 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <Button
-              variant="primary"
-              size="md"
-              className="mt-2 rounded-md"
+            <Link
+              href="https://www.linkedin.com/in/m-zaedan-al-ghifari/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex items-center justify-center rounded-md bg-foreground px-6 py-3 text-base font-medium text-white"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Resume <ArrowUpRight className="ml-1 h-4 w-4" />
-            </Button>
+              Let’s talk <ArrowUpRight className="ml-1 h-4 w-4" />
+            </Link>
           </nav>
         </Container>
       ) : null}

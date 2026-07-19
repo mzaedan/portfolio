@@ -1,46 +1,47 @@
 import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
-import { Github, Linkedin } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Github } from "lucide-react";
 import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative pt-20 pb-32 md:pt-32 md:pb-48 overflow-hidden">
+    <section className="relative overflow-hidden pb-28 pt-16 md:pb-40 md:pt-28">
       <Container className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">
-          <h1 className="text-5xl md:text-7xl tracking-tight text-foreground leading-[1.1]">
-            Designing and developing scalable web applications with clarity and
-            purpose
-            <br />
+          <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/35 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+            <span className="h-2 w-2 rounded-full bg-accent" />
+            Full-stack engineer · Indonesia
+          </div>
+          <h1 className="max-w-4xl text-4xl leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-7xl">
+            I build reliable web products for real world workflows.
           </h1>
-          <p className="text-xl text-muted leading-relaxed max-w-lg">
-            I’m M. Zaedan Al Ghifari, a full-stack engineer passionate about
-            clean code, structured systems, and efficient development workflows.
-            I build web applications that balance performance, usability, and
-            long term maintainability.
+          <p className="max-w-xl text-lg leading-relaxed text-muted md:text-xl">
+            I’m M. Zaedan Al Ghifari. I turn complex needs into maintainable web
+            applications using Next.js, Laravel, and ASP.NET Core with equal
+            focus on usability and clean engineering.
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
             <Link
-              href="/projects"
-              className="inline-flex items-center justify-center px-6 py-3 border border-foreground text-base font-medium rounded-lg text-foreground bg-transparent hover:bg-foreground hover:text-white transition-all duration-200"
+              href="#projects"
+              className="inline-flex items-center justify-center rounded-lg bg-foreground px-6 py-3 text-base font-medium text-white transition-transform duration-200 hover:-translate-y-0.5"
             >
-              View Projects
-            </Link>
-            <Link
-              href="https://github.com/mzaedan/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg text-muted hover:text-foreground transition-colors"
-            >
-              <Github className="w-5 h-5 mr-2" /> GitHub
+              Explore selected work <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
             <Link
               href="https://www.linkedin.com/in/m-zaedan-al-ghifari/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg text-muted hover:text-foreground transition-colors"
+              className="inline-flex items-center justify-center rounded-lg border border-foreground/20 px-6 py-3 text-base font-medium text-foreground transition-colors hover:bg-foreground/5"
             >
-              <Linkedin className="w-5 h-5 mr-2" /> LinkedIn
+              Let’s connect <ArrowUpRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link
+              href="https://github.com/mzaedan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Zaedan's GitHub profile"
+              className="inline-flex h-12 w-12 items-center justify-center rounded-lg text-muted transition-colors hover:bg-black/5 hover:text-foreground"
+            >
+              <Github className="h-5 w-5" />
             </Link>
           </div>
         </div>

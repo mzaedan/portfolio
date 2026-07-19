@@ -6,11 +6,10 @@ export function TechnicalPalette() {
     <section id="about" className="py-24 bg-[var(--background-alt)]">
       <Container>
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-4xl font-serif mb-4">Technical Palette</h2>
-          <p className="text-muted italic">
-            I believe in using the right tool for the job. My current preferred
-            stack prioritizes type safety, performance, and developer
-            experience.
+          <h2 className="text-4xl font-serif mb-4">Tools I Use</h2>
+          <p className="text-muted">
+            A focused toolkit for building, testing, and maintaining useful web
+            products—from interface to backend.
           </p>
         </div>
 

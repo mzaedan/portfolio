@@ -1,8 +1,6 @@
 import { cn } from "@/lib/utils";
 import React from "react";
-import { Link } from "lucide-react"; // Import a dummy link just in case used, but Button is usually button or a tag.
 
-// We will make this polymorphic if needed, but for now simple Button
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "outline" | "ghost" | "link";
   size?: "sm" | "md" | "lg";

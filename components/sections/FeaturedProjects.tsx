@@ -2,7 +2,6 @@ import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { projects } from "@/data/projects";
 import { ArrowRight, Lock } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export function FeaturedProjects() {
@@ -12,10 +11,11 @@ export function FeaturedProjects() {
         <div className="flex justify-between items-end mb-12">
           <div>
             <h2 className="text-4xl font-serif font-semibold mb-4">
-              Featured Projects
+              Selected Work
             </h2>
             <p className="max-w-md text-[#4c463d]">
-              Showcasing full-stack solutions and technical excellence
+              Products built around practical problems, clear workflows, and
+              maintainable systems.
             </p>
           </div>
           <Link
@@ -28,16 +28,38 @@ export function FeaturedProjects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div
+            <article
               key={project.id}
-              className="group flex flex-col overflow-hidden rounded-[28px] border border-black/5 bg-[#d9cfbf] transition-colors hover:bg-[#d3c8b6]"
+              className="group relative flex flex-col overflow-hidden rounded-[28px] border border-black/5 bg-[#d9cfbf] transition-all duration-300 hover:-translate-y-1 hover:bg-[#d3c8b6] hover:shadow-xl hover:shadow-black/5"
             >
-              <div className="relative aspect-video w-full overflow-hidden bg-[#cfc4b3]">
-                {/* Fallback pattern if no image, or actual image */}
-                <div className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.22),_transparent_52%),linear-gradient(135deg,_#d8ccbc,_#cabdaa)] text-black/10">
-                  <span className="text-6xl font-bold opacity-20">
-                    {project.title[0]}
+              {project.isPublic ? (
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View ${project.title} on GitHub`}
+                  className="absolute inset-0 z-10 rounded-[28px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-4"
+                >
+                  <span className="sr-only">View {project.title} on GitHub</span>
+                </Link>
+              ) : null}
+
+              <div className="relative aspect-video w-full overflow-hidden bg-[#cfc4b3] p-6">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.5),_transparent_48%),linear-gradient(135deg,_#ddd2c2,_#c7b9a5)]" />
+                <div className="absolute -right-10 -top-12 h-44 w-44 rounded-full border-[24px] border-white/20 transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute -bottom-14 left-8 h-32 w-32 rotate-12 rounded-[32px] bg-black/7 transition-transform duration-500 group-hover:rotate-6" />
+                <div className="relative flex h-full flex-col justify-between">
+                  <span className="w-fit rounded-full border border-black/10 bg-white/35 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-black/55 backdrop-blur-sm">
+                    {project.category}
                   </span>
+                  <div>
+                    <p className="mb-1 text-xs font-medium text-black/45">
+                      Built with
+                    </p>
+                    <p className="max-w-[85%] text-2xl font-semibold tracking-tight text-black/75">
+                      {project.language}
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -62,12 +84,17 @@ export function FeaturedProjects() {
                 </p>
 
                 <div className="mt-auto flex flex-wrap gap-2">
-                  <Badge className="border-transparent bg-black/6 text-black/65">
-                    {project.language}
-                  </Badge>
+                  {project.highlights.map((highlight) => (
+                    <Badge
+                      key={highlight}
+                      className="border-transparent bg-black/6 text-black/65"
+                    >
+                      {highlight}
+                    </Badge>
+                  ))}
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
